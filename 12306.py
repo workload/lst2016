@@ -17,17 +17,17 @@ def ex(a,b):
     print("Time is reached. train from {} to {}".format(a, b))
 
 def main():
-	i=0
-	try:
-		while time.strftime("%H:%M", time.localtime()) == df['time'][i]:   
-		    ex(from_ls[i],to_ls[i])
-		    time_ls.remove(df['time'][i])
-		    i+=1
+    i=0
+    try:
+        while time.strftime("%H:%M", time.localtime()) == df['time'][i]:   
+	ex(from_ls[i],to_ls[i])
+	time_ls.remove(df['time'][i])
+	i+=1
 
-		    timeArray = time.strptime(date+df['time'][i+1]+":00", "%Y-%m-%d %H:%M:%S")
-		    timeStamp = int(time.mktime(timeArray))
-		    time.sleep(timeStamp-time.time())
+	timeArray = time.strptime(date+df['time'][i+1]+":00", "%Y-%m-%d %H:%M:%S")
+	timeStamp = int(time.mktime(timeArray))
+	ime.sleep(timeStamp-time.time())
 
-	except:
-		print 'all finished!'
+    except:
+	print 'all finished!'
 
